@@ -1,0 +1,536 @@
+
+<html lang="en">
+
+<head>
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <style type="text/css">
+    @import "lesshat";
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+    body {
+        background: #ddd;
+        padding: 40px 40px 400px 40px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        opacity: 0;
+    }
+
+    .circle-canvas {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .circle-wrap {
+        position: relative;
+        width: 100%;
+    }
+
+    .circle-wrap * {
+        box-sizing: border-box;
+    }
+
+    .circle-wrap:before,
+    .circle-wrap:after {
+        content: " ";
+        display: table;
+    }
+
+    .circle-wrap:after {
+        clear: both;
+    }
+
+    .circle-link {
+        background: rgba(249, 245, 241, 0.9);
+        padding: 30px;
+        border-radius: 50%;
+        display: table;
+        position: relative;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .circle-link:hover+.circle-thumb .circle-image-wrap {
+        transform: scale(1);
+    }
+
+    .circle-left .circle-link {
+        float: left;
+    }
+
+    .circle-right .circle-link {
+        float: right;
+    }
+
+    .circle-thumb {
+        border-radius: 50%;
+        background: rgba(42, 155, 128, 0.1);
+        position: absolute;
+        z-index: 1;
+        padding: 30px;
+    }
+
+    .circle-left .circle-thumb {
+        left: 0;
+    }
+
+    .circle-right .circle-thumb {
+        right: 0;
+    }
+
+    .circle-image-wrap {
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        transform: scale(0);
+        transition: all .5s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    }
+
+    .circle-image-wrap img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .circle-image-wrap:after {
+        content: "";
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        background: rgba(42, 155, 128, 0.9);
+        top: 50%;
+        left: 50%;
+        margin: -8px 0 0 -8px;
+        border-radius: 50%;
+    }
+
+    .circle-inner {
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+        padding-left: 55px;
+    }
+
+    .circle-date {
+        color: #EEEBEA;
+        text-transform: uppercase;
+        font-family: 'Patrick Hand', cursive;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        letter-spacing: 0.14em;
+        float: left;
+    }
+
+    .circle-title {
+        color: #fff;
+        font-family: 'Patrick Hand', cursive;
+        font-size: 157px;
+        position: relative;
+        z-index: 4;
+        line-height: 1.2;
+        font-weight: normal;
+        float: left;
+        clear: both;
+        margin: 0;
+    }
+
+    .news,
+    .news+.circle-thumb .circle-image-wrap:after {
+        background: rgba(42, 155, 128, 0.9);
+    }
+
+    .video,
+    .video+.circle-thumb .circle-image-wrap:after {
+        background: rgba(234, 91, 103, 0.9);
+    }
+
+    .features,
+    .features+.circle-thumb .circle-image-wrap:after {
+        background: rgba(83, 72, 141, 0.9);
+    }
+.bottom1{
+  width: 20px;
+  height: 20px;
+  background: #F87876;
+position:absolute;
+margin-top: 3990px;
+margin-left: 500px;
+z-index: 3;
+
+
+}
+.bottom2{
+  width: 20px;
+  height: 20px;
+  background: #F87876;
+position:absolute;
+margin-top: 3990px;
+margin-left: 500px;
+z-index: 3;
+text-align:center;
+font-size:2em;
+
+}v
+
+.bottom1:hover bottom2{
+  transform: scale(200);
+
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="circle-wrap cf">
+        <a href="" class="circle-link news" >
+		<!-- <span class="circle-date">January 6, 2014</span>   -->
+		<h1 class="circle-title">"</h1>
+	</a>
+        <div class="circle-thumb">
+            <img src="1.png" width="640" height="640" alt="" />
+        </div>
+    </div>
+    <div class="circle-wrap cf">
+        <a href="" class="circle-link video">
+		<!-- <span class="circle-date">Febuary 12, 2014</span> -->
+		<h1 class="circle-title">"</h1>
+	</a>
+        <div class="circle-thumb">
+            <img src="2.png" width="640" height="640" alt="" />
+        </div>
+    </div>
+    <div class="circle-wrap cf">
+        <a href="" class="circle-link news">
+		<!-- <span class="circle-date">Febuary 28, 2014</span> -->
+		<h1 class="circle-title">"</h1>
+	</a>
+        <div class="circle-thumb">
+            <img src="3.png" width="640" height="640" alt="" />
+        </div>
+    </div>
+    <div class="circle-wrap cf">
+        <a href="" class="circle-link features">
+		<!-- <span class="circle-date">March 2, 2014</span> -->
+		<h1 class="circle-title">"</h1>
+	</a>
+        <div class="circle-thumb">
+            <img src="4.png" width="640" height="640" alt="" />
+        </div>
+    </div>
+    <div class="circle-wrap cf">
+        <a href="" class="circle-link features">
+		<!-- <span class="circle-date">March 2, 2014</span> -->
+		<h1 class="circle-title">"</h1>
+	</a>
+        <div class="circle-thumb">
+            <img src="5.png" width="640" height="640" alt="" />
+        </div>
+    </div>
+    <div class="circle-wrap cf">
+        <a href="" class="circle-link features">
+		<!-- <span class="circle-date">May 6, 2014</span> -->
+		<h1 class="circle-title">"</h1>
+	</a>
+        <div class="circle-thumb">
+            <img src="6.png" width="640" height="640" alt="" />
+        </div>
+    </div>
+
+    <div class="circle-wrap cf">
+        <a href="" class="circle-link video" >
+		<span class="circle-date">SO! I am not a single quotation mart. I can be everything.</span>
+
+	</a>
+                </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+    (function($) {
+        'use strict';
+
+        $.fn.circle = function(options) {
+
+            var cfg = $.extend({
+                // Defaults.
+                heading: '.circle-title', // The heading of the post
+                date: '.circle-date', // The date of the post
+                lines: 3, // Number of lines to try to split to
+                maxWidth: 400, // Max width of the thumb
+                thumbWidth: 1.4, // The scale of the thumb. relative to link
+                randomMin: 5, // Min % the posts are moved around
+                randomMax: 15, // Max % the posts are moved around
+                distance: 0.75, // Distance % the thumbs are shifted
+                lineWidth: 2 // Width of the canvas lines
+            }, options);
+
+            var $body = $('body');
+
+            // We'll be using side to figure out which way to move the thumb
+            // sideClass makes each one alternate between left side and right side
+            var side,
+                sideClass = 'left',
+                canvas,
+                ctx,
+                mouse = { x: 0, y: 0 };
+
+
+            // Create the canvas
+            $('<canvas>').attr({
+                id: 'circle-canvas',
+                class: 'circle-canvas'
+            }).prependTo($body);
+
+            canvas = document.getElementById("circle-canvas");
+            ctx = canvas.getContext("2d");
+
+
+            // We use this to get the center point of each thumb
+            // so we know where to draw the line to.
+            function getCenter(el) {
+
+                var offset = el.offset(),
+                    width = el.width(),
+                    height = el.height(),
+                    centerX = Math.round(offset.left + width / 2),
+                    centerY = Math.round(offset.top + height / 2);
+
+                return {
+                    x: centerX,
+                    y: centerY
+                };
+            }
+
+            // Draw our canvas lines from the center of the link
+            // to the center of the thumb. We also grab the background
+            // color of the link so we know what color to make the line.
+            function drawLines(el) {
+
+                var linkPos = getCenter(el),
+                    linkX = linkPos.x,
+                    linkY = linkPos.y,
+                    thumbPos = getCenter(el.next()),
+                    thumbX = thumbPos.x,
+                    thumbY = thumbPos.y,
+                    linkColor = el.css('background-color');
+
+                // This moves the lines from the center of the links to the edges instead.
+                // linkX = (side == 'left') ? linkPos.x + (el.width()/2) : linkPos.x - (el.outerWidth()/2);
+
+                ctx.beginPath();
+                ctx.lineWidth = cfg.lineWidth;
+                ctx.strokeStyle = linkColor; // Same color as line background
+                ctx.moveTo(linkX, linkY); // Move to center of link
+                ctx.lineTo(thumbX, thumbY); // Draw to center of thumb
+                ctx.stroke();
+            }
+
+            // We need to clear the canvas before each redraw and on mouse out.
+            function clearCanvas() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+
+            // Take an element an splits it's text up into x lines using br tags
+            // to create new lines.
+            function spreadHeading($el) {
+
+                var words = $el.text().split(' '); // Create array of words
+
+
+                // If it's just one word, don't do anything
+                if (words.length > 1) {
+
+                    var lines = cfg.lines, // Number of lines to split
+                        jump = Math.round(words.length / lines), // Every x word to add a br tag to
+                        breakCount = 0,
+                        i;
+
+                    // Start at 0, then jump to the next word to add a br tag to
+                    for (i = jump - 1; i < words.length; i += jump) {
+
+                        // If we've not reached the line limit yet
+                        if (breakCount < lines - 1) {
+
+                            // Add a br tag to the end of this word
+                            words[i] += '<br>';
+                            breakCount++;
+                        }
+                    }
+
+                    // Turn the array back in to a string and put it back
+                    $el.html(words.join(' '));
+
+                }
+            }
+
+
+
+            // Iterate over each element passed to it
+            return this.each(function() {
+
+                var $link = $(this),
+                    $heading = $link.find(cfg.heading),
+                    $parent = $link.parent(),
+                    $thumb = $link.next(),
+                    $date = $(cfg.date);
+
+                // Split heading up
+                spreadHeading($heading);
+
+                // Alternate to each side
+                $parent.addClass('circle-' + sideClass);
+                sideClass = (sideClass == 'left') ? 'right' : 'left';
+
+                // Figure out which side this is
+                side = ($parent.hasClass('circle-left')) ? 'left' : 'right';
+
+
+
+
+                // Setting up for sizing the link and thumb. If the date happens
+                // to be bigger, we use that instead. Add that padding and see if
+                // it's lower than the max width set.
+                var textWidth = Math.max($heading.width(), $date.width()),
+                    padding = parseInt($link.css('padding-left')),
+                    totalWidth = textWidth + (padding * 2),
+                    maxWidth = cfg.maxWidth,
+                    linkWidth = (totalWidth > maxWidth) ? maxWidth : totalWidth,
+                    thumbWidth = linkWidth * cfg.thumbWidth;
+
+                // Move the top/side of the link to be in the center of the thumb
+                var cssOptions = {},
+                    offset = (thumbWidth / 2) - (linkWidth / 2);
+
+                cssOptions.top = offset;
+                cssOptions[side] = offset;
+
+                // Set the width/height of the thumb and link, and the position of the link.
+                $link.width(linkWidth).height(linkWidth).css(cssOptions);
+                $thumb.width(linkWidth * cfg.thumbWidth).height(linkWidth * cfg.thumbWidth);
+
+                // We also set the height of the wrapper so the canvas knows how big it should be.
+                $parent.height($thumb.outerHeight());
+
+
+
+                // Set the left/right of the wrapper to be a random amount between min/max.
+                var parentOptions = {};
+                parentOptions[side] = ((Math.random() * cfg.randomMax | 0) + cfg.randomMin) + '%';
+
+                $parent.css(parentOptions);
+
+
+
+                // Give the thumb and link wrapper divs
+                $thumb.wrapInner('<div class="circle-image-wrap"></div>');
+                $link.wrapInner('<div class="circle-inner"></div>');
+
+
+                // Update the canvas width and height afer width/heights have been set
+                // on the links/thumbs/wrapper.
+                canvas.width = $body.width();
+                canvas.height = $body.height();
+
+
+
+                // Once all images have loaded, show the page. Stops borked flashes.
+                $thumb.find('img').load(function() {
+                    $body.animate({ 'opacity': 1 }, 400);
+                });
+
+
+                // When we move the mouse over the links
+            }).on('mousemove', function(e) {
+
+                // Clear the canvas
+                clearCanvas();
+
+                var $link = $(this),
+                    $thumb = $link.next(),
+                    $parent = $(this).parent();
+
+                // Figure out which side this is
+                side = ($parent.hasClass('circle-left')) ? 'left' : 'right';
+
+                // Set up the offsets we have to move the thumb depending on where the
+                // mouse is.
+                var offset = $link.offset(),
+                    offsetLeft = offset.left,
+                    offsetTop = offset.top,
+                    linkWidth = $link.width(),
+                    thumbWidth = $thumb.width(),
+                    padding = parseInt($link.css('padding-left'));
+
+                // If it's the right hand side we need to work out right offset
+                var linkOffsetSide = (side == 'left') ? offsetLeft : offsetLeft + linkWidth,
+                    linkOffsetTop = (side == 'left') ? offsetTop : offsetTop - linkWidth;
+
+                // Mouse position relative to link
+                mouse.x = (e.pageX || e.clientX) - linkOffsetSide;
+                mouse.y = (e.pageY || e.clientY) - linkOffsetTop;
+
+                // Update relevant sides css, using the distance as a multiplier
+                if (side == 'left') {
+
+                    $thumb.css({
+                        left: (thumbWidth - mouse.x) * cfg.distance - padding,
+                        top: ((thumbWidth / 2) - mouse.y) * cfg.distance - (padding / 2)
+                    });
+
+
+                } else {
+
+                    $thumb.css({
+                        right: ((thumbWidth / 2) + mouse.x) * cfg.distance + (padding * 2),
+                        top: ((thumbWidth) - mouse.y) * cfg.distance + padding
+                    });
+
+
+                }
+
+
+                // Then draw the canvas lines
+                drawLines($link);
+
+
+                // When we stop hovering over the link
+            }).on('mouseleave', function() {
+
+                var $thumb = $(this).next();
+
+                // Clear the canvas
+                clearCanvas();
+
+
+                // Reset the relevant sides css
+                if (side == 'left') {
+
+                    $thumb.css({
+                        left: 0,
+                        top: 0
+                    });
+
+                } else {
+
+                    $thumb.css({
+                        left: 'auto',
+                        right: 0,
+                        top: 0
+                    });
+
+                }
+
+
+            }); // End return/on
+
+
+        }; // End $.fn.circle
+
+    }(jQuery));
+
+    $('.circle-link').circle();
+    </script>
+</body>
+
+</html>

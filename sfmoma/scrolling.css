@@ -1,0 +1,252 @@
+body {
+  position: relative;
+  height: 4800px;
+  margin: 0 auto;
+  /*background-color:#FFF;*/
+  -webkit-transition: all 0.5s;
+          transition: all 0.5s;
+}
+a{
+  display: block;
+   font-size: 2em;
+   -webkit-margin-before: 0.67em;
+   -webkit-margin-after: 0.67em;
+   -webkit-margin-start: 0px;
+   -webkit-margin-end: 0px;
+
+}
+a:checked{
+  color: black;
+}
+a:active{
+  color: black;
+}
+a:visited{
+  color: black;
+}
+/*.fontcontainer{
+  position: absolute;
+  font-style: 'Spectral SC', serif;
+  font-size: 15px;
+  width:100px;*/
+  /*height: 100px;*/
+  /*text-align: center;
+  z-index:99999;
+}*/
+
+.font1{
+  position: absolute;
+  font-style: 'Spectral SC', serif;
+  font-size: 15px;
+  margin-left: 1150px;
+  margin-top: 160px;
+  width: 300px;
+  z-index:99999;
+}
+
+.font2{
+  position: absolute;
+  font-style: 'Spectral SC', serif;
+  font-size: 15px;
+  margin-left: 800px;
+  margin-top: 350px;
+  z-index:99999;
+}
+.font3{
+  position: absolute;
+  font-style: 'Spectral SC', serif;
+  font-size: 15px;
+  margin-left: 1300px;
+  margin-top: 150px;
+  z-index:99999;
+}
+.font4{
+  position: absolute;
+  font-style: 'Spectral SC', serif;
+  font-size: 15px;
+  margin-left: 800px;
+  margin-top: 350px;
+  z-index:99999;
+}
+.font5{
+  position: absolute;
+  font-style: 'Spectral SC', serif;
+  font-size: 15px;
+  margin-left: 1100px;
+  margin-top: 120px;
+  z-index:99999;
+  width:330px;
+}
+.font6{
+  position: absolute;
+  font-style: 'Spectral SC', serif;
+  font-size: 15px;
+  margin-left: 800px;
+  margin-top: 350px;
+  z-index:99999;
+
+}
+
+.font7{
+  position: absolute;
+  font-style: 'Spectral SC', serif;
+  font-size: 15px;
+  margin-left: 1200px;
+  margin-top: 300px;
+  width: 400px;
+  z-index:99999;
+
+}
+
+
+
+.block{
+  font-family: 'Spectral SC', serif;
+
+  position: fixed;
+  width: 100%;
+  height: 1000px;
+  -webkit-transition: opacity 1s;
+          transition: opacity 1s;
+
+
+          background-size: 100%;
+          z-index: 5;
+
+          background-size: cover;
+          /*background-position: center;*/
+          mix-blend-mode: screen;
+          background-blend-mode: darken;
+
+  transition: transform opacity  0.3s;
+}
+.item1 {
+  background: url('test00.jpg');
+  background-size: 100%;
+  z-index: 5;
+
+  background-size: cover;
+  /*background-position: center;*/
+  mix-blend-mode: screen;
+  background-blend-mode: darken;
+  transition: transform 0.3s;
+
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.block .item1--r {
+  background-color: red;
+  transform: translate(13px, -13px);
+}
+.block .item1--g {
+  background-color: green;
+  transform: translate(-13px, -13px);
+}
+.block .item1--b {
+  background-color: blue;
+  transform: translate(0px, 6px);
+}
+.block:hover .item1 {
+  transform: translate(0px, 0px) ;
+}
+.block1 {
+  background: url('test00.jpg');
+  background-size: 100%;
+  z-index: 5;
+  position: fixed;
+}
+
+.block2 {
+  background: url('test1.jpg');
+  background-size: 100%;
+  z-index: 4;
+  position: fixed;
+}
+
+.block3 {
+  background: url('test2.jpg');
+  background-size: 100%;
+  z-index: 3;
+  position: fixed;
+}
+.block4 {
+  background: url('test3.jpg');
+  background-size: 100%;
+  z-index: 2;
+  position: fixed;
+}
+.block5 {
+  background: url('test4.jpg');
+  background-size: 100% ;
+  z-index: 1;
+  position: fixed;
+}
+.block6 {
+  background: url('test5.jpg');
+  background-size: 100% ;
+  z-index: 0;
+  position: fixed;
+}
+.block7 {
+  background: url('test6.jpg');
+  background-size: 100% ;
+  z-index: -1;
+  position: fixed;
+}
+.block8 {
+  background: url('test0.jpg');
+  background-size: 100% ;
+  z-index: -2;
+  position: fixed;
+}
+
+
+.container {
+  position: fixed;
+  left:63%;
+  top:100px;
+  z-index: 999;
+  opacity: 0.6;
+}
+
+@-webkit-keyframes flashing {
+  0% { background: red; }
+  20% { background: gold; }
+  40% { background: yellowgreen; }
+  60% { background: cornflowerblue; }
+  80% { background: purple; }
+  90% { background: violet; }
+  100% { background: red;}
+}
+@keyframes flashing {
+  0% { background: red; }
+  20% { background: gold; }
+  40% { background: yellowgreen; }
+  60% { background: cornflowerblue; }
+  80% { background: purple; }
+  90% { background: violet; }
+  100% { background: red;}
+}
+
+
+.stick1,
+.stick2,
+.stick3,
+.stick4 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: white;
+  -webkit-transition: all 0.5s;
+          transition: all 0.5s;
+          pointer-events: none;
+}
+.stick1.flash,
+.stick2.flash,
+.stick3.flash,
+.stick4.flash {
+  -webkit-animation: flashing 5s linear infinite;
+          animation: flashing 5s linear infinite;
+}
